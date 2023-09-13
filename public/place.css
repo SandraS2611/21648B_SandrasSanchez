@@ -1,0 +1,10 @@
+body {
+  background-color: indigo;
+  color: antiquewhite;
+}
+
+p {
+    color:purple;
+    font-size: 17px;
+    font-family: "Akronim", cursive;
+}

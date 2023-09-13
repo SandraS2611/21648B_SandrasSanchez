@@ -1,0 +1,23 @@
+body {
+  background-color: aqua;
+  display: grid;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 100vh;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+  margin: 0;
+  font-family: "Akronim", cursive;
+  font-family: "Roboto", sans-serif;
+  font-family: "Rubik Iso", cursive;
+ }
+
+ .boton {
+  margin: 0;
+  background-color: wheat;
+  border-radius: 25px;
+  justify-content: space-between;
+  width: 90%;
+  height: 70px;
+}

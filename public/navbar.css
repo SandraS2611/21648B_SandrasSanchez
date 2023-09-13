@@ -1,0 +1,23 @@
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;  
+    background-color: black;
+    color: hotpink;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 1;
+   }
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 30px;
+}
+
+img {
+    flex-direction: initial;
+    width: 50px;
+    height: 100%;
+}
