@@ -4,11 +4,12 @@
 <main>
   <ul>
   <% places.forEach((place) => { %>
+   
   <p>
     <b><%= place.titulo %></b><br />
     <i><%= place.contenido %></i><br />
-    <img src="<%= place.link %>" alt="<%= place.contenido %>" /><br />
     <span><%= place.createdAt %></span>
+    <img src="<%= place.link %>" alt="<%= place.contenido %>" /><br />
     <button class="boton"><a href="/updates/<%= place.id %>">Editar</a></button>
       <button class="boton"><a href="/delete/<%= place.id %>">Eliminar</a></button>
   </p>
