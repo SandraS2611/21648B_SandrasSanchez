@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
+    <br />
+    <button class="boton"><a href="/places/create">Crear Post</a></button>
     <h1>Lugares:</h1>
     <ul>
-        <% places.forEach((place) => { %>
-            <li>
-            <p>
-                <b><%= place.titulo %></b><br>
-                <i><%= place.contenido %></i><br>
-                <b><img src="<%= place.link %>" alt="<%= place.contenido %>"></b><br>
-            </p>
-        </li>
-        <% }); %>
-    
+      <% places.forEach((place) => { %>
+      <li>
+        <p>
+          <b><%= place.titulo %></b><br />
+          <i><%= place.contenido %></i><br />
+          <b><img src="<%= place.link %>" alt="<%= place.contenido %>" /></b
+          ><br />
+          <a href="/places/updates/<%= place.id %>">Editar</a>
+          <a href="/places/delete/<%= place.id %>">Eliminar</a>
+        </p>
+      </li>
+      <% }); %>
     </ul>
-</body>
+  </body>
 </html>

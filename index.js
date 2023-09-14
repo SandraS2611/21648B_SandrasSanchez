@@ -2,11 +2,12 @@ const express = require("express");
 const cors = require("cors");
 const morgan = require("morgan");
 const { sequelize } = require("./database");
-require("./src/models/Places")
+require("./src/models/Places");
 
 const app = express();
 
 app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 app.use(cors());
 app.use(morgan("dev"));
 
@@ -50,15 +51,11 @@ app.get("/", (req, res) => {
   res.render("index", { título: "Proyecto Final de Sandra S.", places });
 });
 
-app.get("/imagenes", (req, res) => {
-  res.render("imagenes", { título: "Lugares", places });
-});
-
-app.get("/crear", (req, res) => {
-  res.render("crear", { título: "Nuevo Post", places });
-});
+// app.get("/imagenes", (req, res) => {
+//   res.render("imagenes", { título: "Lugares", places });
+// });
 
 app.listen(3000, () => {
-  sequelize.sync({ force: false })
+  sequelize.sync({ force: false });
   console.log("Servidor Conectado");
 });

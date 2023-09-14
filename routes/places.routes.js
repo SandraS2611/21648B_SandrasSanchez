@@ -3,6 +3,7 @@ const { Router } = require("express");
 const {
   placesList,
   createPlace,
+  newPlace,
   findPlace,
   updatePlace,
   deletePlace,
@@ -12,15 +13,11 @@ const router = Router();
 
 //creé un enrutador
 router.get("/", placesList);
-router.post("/", createPlace);
+router.get("/create", createPlace);
+router.get("/updates/:id", findPlace);
+router.get("/delete/:id", deletePlace)
 
-
-
-
-router.get("/:id", findPlace);
-
-router.put("/:id", updatePlace);
-
-router.delete("/:id", deletePlace);
+router.post("/", newPlace);
+router.post("/updates", updatePlace);
 
 module.exports = router;

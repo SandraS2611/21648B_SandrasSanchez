@@ -1,57 +1,47 @@
 const { PlaceModel } = require("../models/Places");
 
-
-// async function placesList (req, res) {
-//   const places = await PlaceModel.findAll()
-//   res.json(places);
-// }
-
 const placesList = async (req, res) => {
-  const places = await PlaceModel.findAll()
+  const places = await PlaceModel.findAll();
   res.render("index", { places });
-}
+};
 
+const createPlace = async (req, res) => {
+  res.render("create");
+};
 
-async function createPlace(req, res) {
+const findPlace = async (req, res) => {
+  const placeId = req.params.id;
+  const place = await PlaceModel.findByPk(placeId);
+  if (!place) {
+    return res.redirect("/places");
+  }
+  res.render("updates", { place });
+};
+
+const updatePlace = async (req, res) => {
+  const { id, titulo, contenido, link } = req.body;
+  const place = await PlaceModel.findByPk(id);
+  await place.update({ titulo, contenido, link });
+  res.redirect("/places");
+};
+
+const newPlace = async (req, res) => {
   const { titulo, contenido, link } = req.body;
   await PlaceModel.create({ titulo, contenido, link });
-  res.send("new place created");
-}
+  res.redirect("/places");
+};
 
-async function findPlace(req, res) {
-  const id = req.params.id;
-  const place = await PlaceModel.findByPk(id);
-  if (!place) {
-    return res.send("Place not Found");
-  }
-  res.json(place);
-}
-
-async function updatePlace(req, res) {
-  const id = req.params.id;
-  const { titulo, contenido, link } = req.body;
-  await PlaceModel.update(
-    { titulo, contenido, link }, {
-      where: {
-        id,
-      },
-    });
-  res.send("Updated Place");
-}
-
-async function deletePlace(req, res) {
-  const id = req.params.id;
-  await PlaceModel.destroy({
-    where: {
-      id,
-    },
-  });
-  res.send("Deleted Place");
-}
+const deletePlace = async (req, res) => {
+  const placeId = req.params.id;
+  const place = await PlaceModel.findByPk(placeId);
+  await place.destroy();
+  res.redirect("/places");
+};
 
 module.exports = {
   placesList,
   createPlace,
+  newPlace,
   findPlace,
   updatePlace,
   deletePlace,
