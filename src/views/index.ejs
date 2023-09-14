@@ -11,16 +11,16 @@
     <h1>Lugares:</h1>
     <ul>
       <% places.forEach((place) => { %>
-      <li>
+ 
         <p>
           <b><%= place.titulo %></b><br />
           <i><%= place.contenido %></i><br />
           <img src="<%= place.link %>" alt="<%= place.contenido %>" /><br />
-          <span><%= place.createAT %></span>
+          <span><%= place.createdAt %></span>
           <a href="/places/updates/<%= place.id %>">Editar</a>
           <a href="/places/delete/<%= place.id %>">Eliminar</a>
         </p>
-      </li>
+   
       <% }); %>
     </ul>
   </body>
