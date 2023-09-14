@@ -2,7 +2,8 @@ const { PlaceModel } = require("../models/Places");
 
 const placesList = async (req, res) => {
   const places = await PlaceModel.findAll();
-  res.render("index", { places });
+  const arrayImages = places.map((place) => place.link)
+  res.render("index", { places, arrayImages });
 };
 
 const createPlace = async (req, res) => {

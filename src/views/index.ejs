@@ -15,8 +15,8 @@
         <p>
           <b><%= place.titulo %></b><br />
           <i><%= place.contenido %></i><br />
-          <b><img src="<%= place.link %>" alt="<%= place.contenido %>" /></b
-          ><br />
+          <img src="<%= place.link %>" alt="<%= place.contenido %>" /><br />
+          <span><%= place.createAT %></span>
           <a href="/places/updates/<%= place.id %>">Editar</a>
           <a href="/places/delete/<%= place.id %>">Eliminar</a>
         </p>
