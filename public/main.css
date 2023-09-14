@@ -21,11 +21,12 @@ main {
   }
   
   .boton {
+    font-family: "Akronim", cursive;
     margin: 0;
-    background-color: paleturquoise;
+    background-color:  rgb(192, 50, 90);
     border-radius: 25px;
-    justify-content: space-between;
-    width: 30%;
-    height: 40px;
+    justify-content: space-around;
+    width: 25%;
+    height: 60px;
   }
 

@@ -11,20 +11,23 @@ body {
 .boton {
   font-family: "Akronim", cursive;
   margin: 0;
-  background-color: wheat;
+  background-color:  rgb(192, 50, 90);
   border-radius: 25px;
   width: 60%;
   height: 40px;
 }
 
 .boton-back {
+    background-color:rgb(244, 175, 194);
+    border-radius: 25px;
+    justify-content: space-around;
+    width: 25%;
+    height: 60px;
   font-family: "Akronim", cursive;
-  margin: 0;
-  background-color: rgb(204, 131, 222);
-  border-radius: 25px;
-  justify-content: space-between;
-  width: 15%;
-  height: 35px;
+}
+
+h1 {
+  font-size: 50px;
 }
 
 form {
@@ -35,5 +38,11 @@ form {
   padding: 0;
   width: 100%;
 
+}
+
+input {
+  width: 500px ;
+  height: 50px;
+  border-radius: 10px;
 }
 
