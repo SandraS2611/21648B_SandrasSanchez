@@ -3,25 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Página de Inicio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
-    <br />
-    <button class="boton"><a href="/places/create">Crear Post</a></button>
-    <h1>Lugares:</h1>
-    <ul>
-      <% places.forEach((place) => { %>
- 
-        <p>
-          <b><%= place.titulo %></b><br />
-          <i><%= place.contenido %></i><br />
-          <img src="<%= place.link %>" alt="<%= place.contenido %>" /><br />
-          <span><%= place.createdAt %></span>
-          <a href="/places/updates/<%= place.id %>">Editar</a>
-          <a href="/places/delete/<%= place.id %>">Eliminar</a>
-        </p>
-   
-      <% }); %>
-    </ul>
+      <%- include("navbar") %> <%- include("main") %> <%- include("footer") %>
   </body>
 </html>

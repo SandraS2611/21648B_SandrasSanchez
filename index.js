@@ -17,11 +17,8 @@ app.use(express.static("public"));
 
 app.set("view engine", "ejs"); //motor de plantillas ejs
 
-app.use("/places", require("./routes/places.routes"));
+app.use("/", require("./routes/places.routes"));
 
-app.get("/", (req, res) => {
-  res.render("index", { título: "Proyecto Final de Sandra S.", places });
-});
 
 app.listen(3000, () => {
   sequelize.sync({ force: false });

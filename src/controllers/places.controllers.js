@@ -2,8 +2,7 @@ const { PlaceModel } = require("../models/Places");
 
 const placesList = async (req, res) => {
   const places = await PlaceModel.findAll();
-  const arrayImages = places.map((place) => place.link)
-  res.render("index", { places, arrayImages });
+  res.render("index" , { places });
 };
 
 const createPlace = async (req, res) => {
@@ -14,7 +13,7 @@ const findPlace = async (req, res) => {
   const placeId = req.params.id;
   const place = await PlaceModel.findByPk(placeId);
   if (!place) {
-    return res.redirect("/places");
+    return res.redirect("/");
   }
   res.render("updates", { place });
 };
@@ -23,20 +22,20 @@ const updatePlace = async (req, res) => {
   const { id, titulo, contenido, link } = req.body;
   const place = await PlaceModel.findByPk(id);
   await place.update({ titulo, contenido, link });
-  res.redirect("/places");
+  res.redirect("/");
 };
 
 const newPlace = async (req, res) => {
   const { titulo, contenido, link } = req.body;
   await PlaceModel.create({ titulo, contenido, link });
-  res.redirect("/places");
+  res.redirect("/");
 };
 
 const deletePlace = async (req, res) => {
   const placeId = req.params.id;
   const place = await PlaceModel.findByPk(placeId);
   await place.destroy();
-  res.redirect("/places");
+  res.redirect("/");
 };
 
 module.exports = {

@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Crear Post</title>
+   <link rel="stylesheet" href="create.css">
     
 </head>
 <body>
-    <button><a href="/places">Volver</a></button>
+    <button class="boton-back"><a href="/"><b>Volver</b></a></button>
     <h1>Crear Post de Un Nuevo Lugar</h1>
 
-    <form action="/places" method="post">
+    <form action="/" method="post">
         <input type="text" name="titulo" placeholder="Nombre del Lugar"><br>
         <textarea name="contenido" cols="30" rows="10" placeholder="Descripción del lugar"></textarea><br>
-        <input type="text" name="link">
-        <button>Crear Post</button>
+        <input type="text" name="link" placeholder="Pegar url"><br>
+        <button class="boton">Subir Post</button>
     </form>
 </body>
 </html>

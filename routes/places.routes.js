@@ -15,7 +15,7 @@ const router = Router();
 router.get("/", placesList);
 router.get("/create", createPlace);
 router.get("/updates/:id", findPlace);
-router.get("/delete/:id", deletePlace)
+router.get("/delete/:id", deletePlace);
 
 router.post("/", newPlace);
 router.post("/updates", updatePlace);
