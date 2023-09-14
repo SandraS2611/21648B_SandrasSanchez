@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const morgan = require("morgan");
 const { sequelize } = require("./database");
+require("./src/models/Places")
 
 const app = express();
 
@@ -15,33 +16,33 @@ app.use(express.static("public"));
 
 app.set("view engine", "ejs"); //motor de plantillas ejs
 
-const places = [
-  {
-    location: "Santiago del Estero",
-    description: "kjdhjhdjfhg",
-    date: "26/11/1980",
-  },
-  {
-    location: "La Banda",
-    description: "fjdfljhjgihdfgjl",
-    date: "07/03/2016",
-  },
-  {
-    location: "Termas del Río Hondo",
-    description: "jsdhfjhsdjhdf",
-    date: "14/08/2020",
-  },
-  {
-    location: "Tucumán",
-    description: "ejashfsdhjfhd",
-    date: "22/09/1983",
-  },
-  {
-    location: "Santa Fe",
-    description: "ejashfsdhjfhd",
-    date: "22/09/1910",
-  },
-];
+// const places = [
+//   {
+//     location: "Santiago del Estero",
+//     description: "kjdhjhdjfhg",
+//     date: "26/11/1980",
+//   },
+//   {
+//     location: "La Banda",
+//     description: "fjdfljhjgihdfgjl",
+//     date: "07/03/2016",
+//   },
+//   {
+//     location: "Termas del Río Hondo",
+//     description: "jsdhfjhsdjhdf",
+//     date: "14/08/2020",
+//   },
+//   {
+//     location: "Tucumán",
+//     description: "ejashfsdhjfhd",
+//     date: "22/09/1983",
+//   },
+//   {
+//     location: "Santa Fe",
+//     description: "ejashfsdhjfhd",
+//     date: "22/09/1910",
+//   },
+// ];
 
 app.use("/places", require("./routes/places.routes"));
 
@@ -58,9 +59,6 @@ app.get("/crear", (req, res) => {
 });
 
 app.listen(3000, () => {
-  sequelize
-    .sync()
-    .then(() => console.log("DB is connected"))
-    .catch((err) => console.log(err));
+  sequelize.sync({ force: false })
   console.log("Servidor Conectado");
 });

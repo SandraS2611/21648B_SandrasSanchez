@@ -1,10 +1,16 @@
 const { PlaceModel } = require("../models/Places");
 
 
-async function placesList (req, res) {
+// async function placesList (req, res) {
+//   const places = await PlaceModel.findAll()
+//   res.json(places);
+// }
+
+const placesList = async (req, res) => {
   const places = await PlaceModel.findAll()
-  res.json(places);
+  res.render("index", { places });
 }
+
 
 async function createPlace(req, res) {
   const { titulo, contenido, link } = req.body;

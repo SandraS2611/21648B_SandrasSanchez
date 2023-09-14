@@ -12,8 +12,10 @@ const router = Router();
 
 //creé un enrutador
 router.get("/", placesList);
-
 router.post("/", createPlace);
+
+
+
 
 router.get("/:id", findPlace);
 
