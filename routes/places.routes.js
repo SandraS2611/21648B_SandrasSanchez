@@ -19,4 +19,5 @@ router.get("/delete/:id", deletePlace);
 
 router.post("/", newPlace);
 router.post("/updates", updatePlace);
+
 module.exports = router;
