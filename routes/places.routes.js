@@ -11,7 +11,7 @@ const {
 
 const router = Router();
 
-//creé un enrutador
+//creé enrutadoradores
 router.get("/", placesList);
 router.get("/create", createPlace);
 router.get("/updates/:id", findPlace);
