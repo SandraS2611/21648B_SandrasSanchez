@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    
+    <title>Editar página</title>
+      
 </head>
 <body>
-    <button><a href="/">Volver</a></button>
+    <button class="boton-back"><a href="/">Volver</a></button>
     <h1>Editar un Lugar</h1>
 
     <form action="/updates" method="post">
@@ -15,7 +15,7 @@
         <input type="text" name="titulo" placeholder="Nombre del Lugar" value="<%= place.titulo %>"><br>
         <textarea name="contenido" cols="30" rows="10" placeholder="Descripción del lugar"><%= place.contenido %></textarea><br>
         <input type="text" name="link">
-        <button>Guardar</button>
+        <button class="boton">Guardar</button>
     </form>
 </body>
 </html>

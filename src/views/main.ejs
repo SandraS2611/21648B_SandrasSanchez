@@ -1,15 +1,17 @@
-<link rel="stylesheet" href="./main.css">
+<link rel="stylesheet" href="./main.css" />
+
 
 <main>
-    <br />
-    <button class="boton"><a href="/crear">Crear Post</a></button>
-
-    <br />
-    <button class="boton"><a href="/">Buscar Lugares</a></button>
-
-    <br />
-    <button class="boton"><a href="/">Actualizar un Lugar</a></button>
-
-    <br />
-    <button class="boton"><a href="/">Eliminar Lugar</a></button>
+  <ul>
+  <% places.forEach((place) => { %>
+  <p>
+    <b><%= place.titulo %></b><br />
+    <i><%= place.contenido %></i><br />
+    <img src="<%= place.link %>" alt="<%= place.contenido %>" /><br />
+    <span><%= place.createdAt %></span>
+    <button class="boton"><a href="/updates/<%= place.id %>">Editar</a></button>
+      <button class="boton"><a href="/delete/<%= place.id %>">Eliminar</a></button>
+  </p>
+  <% }); %>
+  </ul>
 </main>

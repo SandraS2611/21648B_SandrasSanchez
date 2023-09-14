@@ -1,5 +1,4 @@
 body {
-  background-color: aqua;
   display: grid;
   flex-direction: row;
   justify-content: space-between;

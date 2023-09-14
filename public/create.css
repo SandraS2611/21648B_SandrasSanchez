@@ -1,0 +1,39 @@
+body {
+
+  background-color: indigo;
+  color: rgb(247, 114, 66);
+  font-size: 17px;
+  font-family: "Akronim", cursive;
+  font-family: "Roboto", sans-serif;
+  font-family: "Rubik Iso", cursive;
+}
+
+.boton {
+  font-family: "Akronim", cursive;
+  margin: 0;
+  background-color: wheat;
+  border-radius: 25px;
+  width: 60%;
+  height: 40px;
+}
+
+.boton-back {
+  font-family: "Akronim", cursive;
+  margin: 0;
+  background-color: rgb(204, 131, 222);
+  border-radius: 25px;
+  justify-content: space-between;
+  width: 15%;
+  height: 35px;
+}
+
+form {
+  display: grid;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+
+}
+
