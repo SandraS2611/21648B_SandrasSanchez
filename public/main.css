@@ -1,6 +1,6 @@
 main {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  flex-direction: row;
   justify-content: space-around;
   text-align: center;
   background-color: rgb(216, 189, 242);
@@ -14,12 +14,7 @@ main {
   font-family: "Roboto", sans-serif;
   font-family: "Rubik Iso", cursive;
   }
-  
-  ul {
-    width: 90%;
-    height: 90%;
-  }
-  
+    
   .boton {
     font-family: "Akronim", cursive;
     margin: 0;
