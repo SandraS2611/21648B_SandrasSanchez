@@ -6,7 +6,7 @@ main {
   flex-direction: row;
   justify-content: space-around;
   text-align: center;
-  color: rgb(205, 249, 190);
+  color: rgb(28, 91, 7);
   grid-column-start: 1;
   grid-column-end: 6;
   grid-row-start: 2;
@@ -25,7 +25,7 @@ img {
   .boton {
     font-family: "Akronim", cursive;
     margin: 0;
-    background-color:  rgb(240, 234, 164);
+    background-color:  rgb(23, 89, 78);
     border-radius: 25px;
     justify-content: space-around;
     width: 25%;

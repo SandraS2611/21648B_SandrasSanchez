@@ -1,6 +1,9 @@
 body {
+  margin: 0;
+  padding: 0;
+  display:flexbox;
   background-image: url(imagenes/SandraSS.png);
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-size: 100% 100%;
   color: rgb(68, 25, 10);
   font-size: 17px;
