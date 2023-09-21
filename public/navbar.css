@@ -1,24 +1,16 @@
-nav {
-    margin: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between; 
-    align-items: center; 
-    background-color: black;
+nav {    
+     margin: 0;
+    background-color: rgb(71, 90, 176);
     color: hotpink;
-    grid-column-start: 1;
-    grid-column-end: 6;
-    grid-row-start: 1;
    }
 
 .boton-nav {   
     background-color: rgb(244, 175, 194);
-    border-radius: 25px;
-    justify-content: space-around;
+    border-radius: 25px;   
     width: 25%;
     height: 60px;
 }
 
-i {
+span {
     font-size: 34px;
 }
