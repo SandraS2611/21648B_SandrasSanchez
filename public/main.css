@@ -1,10 +1,12 @@
 main {
-  display: flex;
-  flex-direction: column;
+  background-image: url(imagenes/SSceleste.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: grid;
+  flex-direction: row;
   justify-content: space-around;
   text-align: center;
-  background-color: rgb(216, 189, 242);
-  color: rgb(100, 37, 93);
+  color: rgb(28, 91, 7);
   grid-column-start: 1;
   grid-column-end: 6;
   grid-row-start: 2;
@@ -14,16 +16,16 @@ main {
   font-family: "Roboto", sans-serif;
   font-family: "Rubik Iso", cursive;
   }
-  
-  ul {
-    width: 90%;
-    height: 90%;
-  }
-  
+
+img {
+  width: 60%;
+  height: 400px;
+}
+    
   .boton {
     font-family: "Akronim", cursive;
     margin: 0;
-    background-color:  rgb(192, 50, 90);
+    background-color:  rgb(23, 89, 78);
     border-radius: 25px;
     justify-content: space-around;
     width: 25%;

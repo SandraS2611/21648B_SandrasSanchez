@@ -1,19 +1,23 @@
 <link rel="stylesheet" href="./main.css" />
 
 <main>
-    <div class="col-xs-12 col-sm-6 col-md-8>
+    
+<div class="row">
+  <div class="col-12 col-sm-8 col-md-9 col-lg-10 col-xl-11 col-xxl-12">
         <% places.forEach((place) => { %>
         <img src="<%= place.link %>" alt="<%= place.contenido %>" class="card-img-top" >
         <div class="card-body">
           <h5 class="card-title"><%= place.titulo %></h5>
           <p class="card-text"><%= place.contenido %></p>
           <span><%= place.createdAt %></span>
-        </div>
-      </div>
-   
+        </div>   
+      
   <ul>
       <button class="boton"><a href="/updates/<%= place.id %>">Editar</a></button>
-      <button class="boton"><a href="/delete/<%= place.id %>">Eliminar</a></button>
-  <% }); %>
-  </ul>
+      <button class="boton" id="b_delete"><a href="/delete/<%= place.id %>">Eliminar</a></button>
+      <% }); %>
+    </ul>
+</div>
+</div>
+<script src="./main.js"></script>
 </main>

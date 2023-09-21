@@ -1,6 +1,11 @@
 body {
-  background-color: indigo;
-  color: rgb(247, 114, 66);
+  margin: 0;
+  padding: 0;
+  display:flexbox;
+  background-image: url(imagenes/SandraSS.png);
+  background-repeat: repeat;
+  background-size: 100% 100%;
+  color: rgb(68, 25, 10);
   font-size: 17px;
   font-family: "Akronim", cursive;
   font-family: "Roboto", sans-serif;
